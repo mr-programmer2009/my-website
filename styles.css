@@ -99,12 +99,6 @@ p {
     border-radius: 8px;
     background-color: #f9f9f9;
 }
-#gallery {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 60px;
-}
 
 h2 {
     font-size: 2.5rem;
@@ -123,14 +117,12 @@ h2 {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
-    margin-left: 10px;
 }
 
 .gallery-item:hover {
@@ -418,6 +410,9 @@ body {
         padding: 10px;
         cursor: pointer;
     }
+    img{
+        width: 100%;
+    };
 }
 
 /* استایل‌های منوی کشویی */
@@ -437,3 +432,9 @@ body {
 /* .dropdown-container a:hover {
     background-color: #ddd;
 } */
+@media screen and(max-width: 750px){
+    img{
+        position: noon;
+        height: auto;
+    }
+}
