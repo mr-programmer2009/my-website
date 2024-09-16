@@ -380,3 +380,60 @@ html {
 body {
     scrollbar-color: #ff6666 #f0f0f0;
 }
+/* استایل‌های عمومی برای منو */
+.sidebar {
+    /* background-color: #f4f4f4; رنگ پس‌زمینه منو */
+    width: 250px; /* عرض منو */
+    height: 100%; /* ارتفاع منو */
+    position: fixed; /* ثابت بودن منو در سمت چپ */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* پنهان کردن محتوای اضافی در افقی */
+    transition: 0.3s; /* زمان انتقال */
+}
+
+/* استایل دکمه منو برای موبایل */
+.menu-button {
+    display: none; /* پنهان کردن دکمه منو در صفحه‌های بزرگتر */
+}
+
+/* استایل برای دکمه منو در صفحه‌های کوچک‌تر */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* پنهان کردن منو در صفحه‌های موبایل */
+        position: absolute; /* موقعیت منو در صفحه‌های موبایل */
+        width: 100%; /* عرض منو در موبایل */
+    }
+    .sidebar.show {
+        display: block; /* نمایش منو با دکمه */
+    }
+    .menu-button {
+        display: block; /* نمایش دکمه منو */
+        position: fixed; /* ثابت بودن دکمه منو */
+        top: 0;
+        left: 0;
+        background-color: #333; /* رنگ پس‌زمینه دکمه منو */
+        color: #fff; /* رنگ متن دکمه منو */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+/* استایل‌های منوی کشویی */
+.dropdown-container {
+    display: none; /* پنهان کردن منوی کشویی به‌طور پیش‌فرض */
+    /* background-color: #f9f9f9; رنگ پس‌زمینه منوی کشویی */
+}
+
+.dropdown-container a {
+    padding: 10px; /* فاصله داخلی لینک‌ها */
+    text-decoration: none; /* حذف خط زیر لینک‌ها */
+    display: block; /* نمایش لینک‌ها به‌طور بلوکی */
+    color: #000; /* رنگ متن لینک‌ها */
+}
+
+/* تغییر رنگ لینک‌ها در حالت hover */
+/* .dropdown-container a:hover {
+    background-color: #ddd;
+} */

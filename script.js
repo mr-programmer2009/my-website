@@ -24,3 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+function toggleMenu() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+}
+
+/* برای دکمه منوی کشویی */
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+    var dropdown = document.querySelector('.dropdown-container');
+    dropdown.classList.toggle('show');
+});

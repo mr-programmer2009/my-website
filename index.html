@@ -50,6 +50,33 @@
             -ms-user-select: none;     /* Internet Explorer/Edge */
             user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
         }
+          /* منو به‌طور پیش‌فرض در صفحه‌های بزرگتر نمایش داده شود */
+          .menu {
+            display: block;
+        }
+
+        /* منو در صفحه‌های کوچک‌تر پنهان شود و با دکمه نمایش داده شود */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                z-index: 1000;
+            }
+            .menu.show {
+                display: block;
+            }
+            .menu-button {
+                display: block;
+            }
+        }
+        .menu-button {
+            display: none;
+        }
+    </style>
     </style>
     <script>
         document.addEventListener('keydown', function(e) {
@@ -161,6 +188,7 @@
             <p>این سایت به گرامیداشت زندگی و دستاوردهای مریم میرزاخانی اختصاص دارد. هدف ما ارائه اطلاعات و منابع ارزشمند درباره او است و با طراحی منحصر به فرد و جذاب، سعی داریم تا تجربه‌ای دلپذیر برای بازدیدکنندگان فراهم کنیم.</p>
         </section>
     </main>
+    <button class="menu-button" onclick="toggleMenu()">☰ منو</button>
     <div class="sidebar">
         <a href="#biography">زندگی‌نامه</a>
         <button class="dropdown-btn">زندگی‌نامه و دستاوردها</button>
@@ -173,6 +201,7 @@
         <a href="#articles">مقالات و منابع</a>
         <a href="#contact">تماس با ما</a>
     </div>
+    <script src="scripts.js"></script> <!-- لینک به فایل JavaScript -->
         <p  style="margin-right: 4%;">© 2024 یادبود مریم میرزاخانی. تمامی حقوق محفوظ است.</p>
     </footer>
     <script src="script.js"></script>
